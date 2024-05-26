@@ -22,7 +22,9 @@
     <!-- <link href="css/sb-admin-2.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="./assets/css/sb-admin-2.min.css">
 
-
+    <!-- alertify js  -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/alertify.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/themes/bootstrap.min.css"/>
 </head>
 
 <body id="page-top">
