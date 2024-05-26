@@ -1,11 +1,10 @@
-    <!-- ini  header -->
-    <?php 
+<!-- ini  header -->
+<?php 
         include('includes/header.php');
         include('../middleware/adminMiddleware.php');
     ?>
     <?php include('includes/sidebar.php') ?>
     <?php include('includes/navbar.php') ?>
-
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
