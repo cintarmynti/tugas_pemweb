@@ -28,10 +28,6 @@ nav {
     font-weight: bold;
 }
 
-.nav-link.active {
-    font-weight: bold;
-}
-
 .navbar-logo img {
     height: 40px;
 }
