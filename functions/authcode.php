@@ -1,6 +1,9 @@
 <?php
 session_start();
 include('../config/dbcon.php');
+include('myfunctions.php');
+
+
 if (isset($_POST['register_btn'])) {
     $name = mysqli_real_escape_string($con, $_POST['name']);
     $phone = mysqli_real_escape_string($con, $_POST['phone']);
@@ -24,16 +27,13 @@ if (isset($_POST['register_btn'])) {
             $insert_query_run = mysqli_query($con, $insert_query);
     
             if ($insert_query_run) {
-                $_SESSION['message'] = "Registered Successfully";
-                header('Location: ../login.php');
+                redirect("../login.php", "Registered Successfully");
             } else {
-                $_SESSION['message'] = "Something went wrong";
-                header('Location: ../register.php');
+                redirect("../register.php", "Something went wrong");
             }
     
         } else {
-            $_SESSION['message'] = "Password Do Not Match";
-            header('Location: ../register.php');
+            redirect("../register.php", "Password Do Not Match");
         }
     }
 
@@ -53,6 +53,7 @@ if (isset($_POST['register_btn'])) {
         $userdata = mysqli_fetch_array($login_query_run);
         $username = $userdata['name'];
         $useremail = $userdata['email'];
+        $role_as = $userdata['role_as'];
 
 
         $_SESSION['auth_user'] = [
@@ -60,8 +61,14 @@ if (isset($_POST['register_btn'])) {
             'email' => $useremail
         ];
 
-        $_SESSION['message'] = "Logged In SUccessfully";
-        header('Location: ../index.php');
+        $_SESSION['role_as'] = $role_as;
+        if($role_as == 1){
+            redirect("../admin/index.php", "Welcome to Dashboard");
+        }else{
+            redirect("../index.php", "Logged in Successfully");
+        }
+
+       
 
     }else{
         $_SESSION['message'] = "Invalid Credentials";
