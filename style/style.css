@@ -6,8 +6,8 @@ body, html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.navbar {
-    background: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent background */
+nav {
+    background: rgba(0, 0, 0, 0) !important; /* Semi-transparent background */
     border-bottom: none;
     position: absolute; /* Make the navbar position absolute */
     top: 0;
@@ -18,11 +18,13 @@ body, html {
 
 .navbar-brand  {
     margin-left:30px ;
-    color: #050101 !important;
+    filter:brightness(100%);
+    color: #ffffff !important;
+    font-size: 50px;
 }
 
 .nav-link {
-    color: #050101 !important;
+    color: #ffffff !important;
 }
 
 .nav-link.active {
@@ -36,12 +38,14 @@ body, html {
 #homepage {
     width: 100%;
     height: 100vh;
+    background: url('/assets/Frame1.png');
+    filter: brightness(60%); 
+    background-size: cover;
+    background-position: center;
     position: relative;
 }
 
-.hero {
-    background: url('/assets/Frame1.png') no-repeat center center/cover;
-    filter: brightness(60%);
+.hero {     
     width: 100%;
     height: 100%;
     display: flex;
