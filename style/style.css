@@ -16,14 +16,19 @@ nav {
     z-index: 10; /* Ensure the navbar is above other elements */
 }
 
-.navbar-brand  {
-    margin-left:30px ;
+.navbar-brand {
+    font-size: 1.5rem; /* Adjust the size as needed */
+    font-weight: bold; /* Optional: Make the text bold */
+    margin-left:50px ;
     filter:brightness(100%);
     color: #ffffff !important;
-    font-size:50px;
+
 }
 
+
 .nav-link {
+     font-size: 1.5rem; /* Adjust the size as needed */
+    font-weight: bold; /* Optional: Make the text bold */
     color: #ffffff !important;
     font-weight: bold;
 }
@@ -69,4 +74,72 @@ nav {
     justify-content: space-between;
 }
 
+.grup1 {
+    padding: 20px, 100px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
 
+#homepage2 {
+    padding: 50px 0;
+  }
+  
+  #homepage2 h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
+  #homepage2 p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  .grup2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .slider {
+    overflow: hidden;
+    position: relative;
+    width: 60%; /* Adjust width as needed */
+  }
+  
+  .slide {
+    animation: slide 10s infinite ease-in-out;
+    width: 100%;  /* Image width should be 100% of slider */
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-300%); /* Adjust percentage based on number of slides */
+    }
+  }
+  
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 40%; /* Adjust width as needed */
+  }
+  
+  .navigation button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: #fff;
+  }
+  
+  .navigation button:hover {
+    color: #ddd;
+  }
+  
