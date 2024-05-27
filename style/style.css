@@ -7,30 +7,25 @@ body, html {
 }
 
 nav {
-    background: rgba(0, 0, 0, 0) !important; /* Semi-transparent background */
-    border-bottom: none;
-    position: absolute; /* Make the navbar position absolute */
-    top: 0;
-    width: 100%;
-    line-height: 80px;
-    z-index: 10; /* Ensure the navbar is above other elements */
+  background: rgba(0, 0, 0, 0) !important; /* Semi-transparent background */
+  border-bottom: none;
+  position: absolute; /* Make the navbar position absolute */
+  top: 0;
+  width: 100%;
+  line-height: 80px;
+  z-index: 10; /* Ensure the navbar is above other elements */
 }
 
-.navbar-brand {
-    font-size: 1.5rem; /* Adjust the size as needed */
-    font-weight: bold; /* Optional: Make the text bold */
-    margin-left:50px ;
-    filter:brightness(100%);
-    color: #ffffff !important;
-
+.navbar-brand  {
+  margin-left:30px ;
+  filter:brightness(100%);
+  color: #ffffff !important;
+  font-size:50px;
 }
-
 
 .nav-link {
-     font-size: 1.5rem; /* Adjust the size as needed */
-    font-weight: bold; /* Optional: Make the text bold */
-    color: #ffffff !important;
-    font-weight: bold;
+  color: #ffffff !important;
+  font-weight: bold;
 }
 
 .navbar-logo img {
@@ -81,7 +76,7 @@ nav {
 }
 
 #homepage2 {
-    padding: 50px 0;
+    padding: 0px 0;
   }
   
   #homepage2 h1 {
@@ -89,57 +84,88 @@ nav {
     margin-bottom: 20px;
   }
   
-  #homepage2 p {
-    font-size: 18px;
-    line-height: 1.5;
-  }
-  
-  .grup2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  * {
+    box-sizing: border-box;
   }
   
   .slider {
+
+    width: 300px;
+    text-align: center;
     overflow: hidden;
-    position: relative;
-    width: 60%; /* Adjust width as needed */
   }
   
-  .slide {
-    animation: slide 10s infinite ease-in-out;
-    width: 100%;  /* Image width should be 100% of slider */
-  }
-  
-  .slide img {
-    width: 100%;
-    height: auto;
-  }
-  
-  @keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-300%); /* Adjust percentage based on number of slides */
-    }
-  }
-  
-  .navigation {
+  .slides {
     display: flex;
-    justify-content: space-between;
-    width: 40%; /* Adjust width as needed */
+    margin-right: 40px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; 
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    /*
+    scroll-snap-points-x: repeat(300px);
+    scroll-snap-type: mandatory;
+    */
+  }
+  .slides::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  .slides::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+  }
+
+  .slides::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .slides > div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 300px;
+    height: 300px;
+    margin-right: 50px;
+    border-radius: 10px;
+    background: #eee;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+  }
+
+  img {
+    border-radius: ;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
   
-  .navigation button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 30px;
-    color: #fff;
+  .slider > a {
+    display: inline-flex;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: white;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 0 0.5rem 0;
+    position: relative;
   }
-  
-  .navigation button:hover {
-    color: #ddd;
+  .slider > a:active {
+    top: 1px;
+  }
+  .slider > a:focus {
+    background: #000;
   }
   
