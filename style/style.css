@@ -7,7 +7,7 @@ body, html {
 }
 
 nav {
-  background: rgba(0, 0, 0, 0) !important; /* Semi-transparent background */
+  background: rgba(0, 0, 0, 0); /* Semi-transparent background */
   border-bottom: none;
   position: absolute; /* Make the navbar position absolute */
   top: 0;
@@ -16,12 +16,17 @@ nav {
   z-index: 10; /* Ensure the navbar is above other elements */
 }
 
-.navbar-brand  {
+.navbar-brand{
   margin-left:30px ;
   filter:brightness(100%);
   color: #ffffff !important;
-  font-size:50px;
+  font-size:25px !important; 
+  font-weight: bold;
 }
+
+/* .navbar-nav{
+  background-color: #000;
+} */
 
 .nav-link {
   color: #ffffff !important;
@@ -141,7 +146,6 @@ nav {
   }
 
   img {
-    border-radius: ;
     object-fit: cover;
     position: absolute;
     top: 0;
