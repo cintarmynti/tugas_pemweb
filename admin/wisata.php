@@ -49,7 +49,13 @@
                                                             <td><?= $item['nama']; ?></td>
                                                             <td><?= $item['alamat']; ?></td>
                                                             <td><?= $item['jam_buka']; ?></td>
-                                                            <td><a class="btn btn-primary" href="edit-wisata.php?id=<?= $item['id']; ?>">Edit</a></td>
+                                                            <td>
+                                                                <a class="btn btn-primary" href="edit-wisata.php?id=<?= $item['id']; ?>">Edit</a>
+                                                                <form action="code.php" method="POST">
+                                                                    <input type="hidden" name="wisata_id" value="<?= $item['id']; ?>">
+                                                                    <button type="submit" name="delete_wisata_btn" class="btn btn-danger">Delete</button>
+                                                                </form>
+                                                            </td>
                                                           
 
                                                         </tr>

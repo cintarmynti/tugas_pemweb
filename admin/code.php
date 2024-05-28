@@ -70,14 +70,38 @@
                     unlink("../uploads/".$old_image);
                 }
             }
-            redirect("edit-wisata.php?id=$wisata_id", "Category Updated Successfully");
+            
+            redirect("edit-wisata.php?id=$wisata_id", "wisata Updated Successfully");
         }else
         {
-            redirect("edit-wisata.php?id=$wisata_id", "Category Went Wrong");
+            redirect("edit-wisata.php?id=$wisata_id", "wisata Went Wrong");
 
         }
 
 
+    }else if(isset($_POST['delete_wisata_btn'])){
+        $wisata_id = mysqli_real_escape_string($con, $_POST['wisata_id']);
+
+        $wisata_query = "SELECT * FROM wisata WHERE id='$wisata_id'";
+        $wisata_query_run = mysqli_query($con, $wisata_query);
+        $wisata_data = mysqli_fetch_array($wisata_query_run);
+        $image = $wisata_data['gambar'];
+
+        $delete_query = "DELETE FROM wisata WHERE id='$wisata_id'";
+        $delete_query_run = mysqli_query($con, $delete_query);
+
+        if($delete_query_run)
+        {   
+            if(file_exists("../uploads/".$image))
+            {
+                unlink("../uploads/".$image);
+            }
+            redirect("wisata.php", "Wisata Deleted Successfully");
+               
+        }else{
+            redirect("wisata.php", "Something went wrong");
+
+        }
     }
 
 ?>
