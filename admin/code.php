@@ -31,6 +31,49 @@
         }else{
             redirect("tambah-wisata.php", "Something went wrong");
         }
+    }else if(isset($_POST['update_wisata_btn'])){
+        $wisata_id = $_POST['wisata_id'];
+        $nama = $_POST['nama'];
+        $desc = $_POST['desc'];
+        $alamat = $_POST['alamat'];
+        $htm = $_POST['htm'];
+        $jam_buka = $_POST['jam_buka'];
+        $kontak = $_POST['kontak'];
+        $kategori = $_POST['kategori'];
+
+        $new_image = $_FILES['gambar']['name'];
+        $old_image = $_POST['old_image'];
+
+        if($new_image != ''){
+            $update_filename = $new_image;
+        }else{
+            $update_filename = $old_image;
+        }
+
+        $path = "../uploads";
+
+
+        $update_query = "UPDATE wisata SET nama='$nama', `desc`='$desc', alamat='$alamat', htm='$htm', jam_buka='$jam_buka', kontak='$kontak', kategori='$kategori', gambar='$update_filename' WHERE id='$wisata_id'";
+
+        $update_query_run = mysqli_query($con, $update_query);
+
+        if($update_query_run)
+        {
+            echo "masuk gais";
+            if($_FILES['gambar']['name'] != "")
+            {
+                move_uploaded_file($_FILES['gambar']['tmp_name'], $path.'/'.$new_image);
+                if(file_exists("../uploads/".$old_image))
+                {
+                    unlink("../uploads/".$old_image);
+                }
+            }
+            redirect("edit-wisata.php?id=$wisata_id", "Category Updated Successfully");
+
+            
+        }
+
+
     }
 
 ?>

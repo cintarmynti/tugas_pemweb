@@ -24,11 +24,8 @@
                                             <th>Nama</th>
                                             <th>alamat</th>
                                             <th>jam_buka</th>
-                                            <th>htm</th>
-                                            <th>kontak</th>
-                                            <th>kategori</th>
-                                            <th>desc</th>
-                                            <th>gambar</th>
+                                            <th>action</th>
+
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -37,11 +34,7 @@
                                             <th>Nama</th>
                                             <th>alamat</th>
                                             <th>jam_buka</th>
-                                            <th>htm</th>
-                                            <th>kontak</th>
-                                            <th>kategori</th>
-                                            <th>desc</th>
-                                            <th>gambar</th>
+                                            <th>action</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -56,11 +49,8 @@
                                                             <td><?= $item['nama']; ?></td>
                                                             <td><?= $item['alamat']; ?></td>
                                                             <td><?= $item['jam_buka']; ?></td>
-                                                            <td><?= $item['htm']; ?></td>
-                                                            <td><?= $item['kontak']; ?></td>
-                                                            <td><?= $item['desc']; ?></td>
-                                                            <td><?= $item['kategori']; ?></td>
-                                                            <td><img src="../uploads/<?= $item['gambar']; ?>" width="50px" alt=""></td>
+                                                            <td><a class="btn btn-primary" href="edit-wisata.php?id=<?= $item['id']; ?>">Edit</a></td>
+                                                          
 
                                                         </tr>
                                                     <?php
