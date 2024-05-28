@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@100;200;300;400;500;600;700;800;900&display=swap'); /*font untuk teks hero*/
+
 body, html {
     margin: 0;
     padding: 0;
@@ -17,16 +19,12 @@ nav {
 }
 
 .navbar-brand{
-  margin-left:30px ;
+  margin-left:100px ;
   filter:brightness(100%);
   color: #ffffff !important;
   font-size:25px !important; 
   font-weight: bold;
 }
-
-/* .navbar-nav{
-  background-color: #000;
-} */
 
 .nav-link {
   color: #ffffff !important;
@@ -55,17 +53,18 @@ nav {
 
 .hero-text {
     color: #fff;
-    text-align: center;
+    text-align: left;
     
     margin-top: 150px;
-    margin-left: 50px;
+    margin-left: 100px;
+    padding-right: 20px;
 }
 
 .hero-text h1{
-    font-style: Roboto;
-    font-size: 50px;
-    margin: 0px;
-    padding-right: 20px;
+  font-family: 'Roboto Serif', serif;
+  font-size: 50px;
+  font-weight: 900;
+  font-weight: 700;
 }
 
 #homepage2 {
