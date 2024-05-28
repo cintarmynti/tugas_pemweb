@@ -107,6 +107,8 @@
         $kategori = $_POST['kategori'];
         $jam_buka = $_POST['jam_buka'];
         $desc = $_POST['desc'];
+        $alamat = $_POST['alamat'];
+        $metode_pembayaran = $_POST['metode_pembayaran'];
         $gambar = $_FILES['gambar_kuliner']['name'];
 
         $path = "../uploads";
@@ -114,7 +116,7 @@
         $image_ext = pathinfo($gambar, PATHINFO_EXTENSION);
         $filename = time().'.'.$image_ext;
 
-        $kuliner_query = "INSERT INTO kuliner (nama,`desc`,gambar,jam_buka,kontak,kategori) VALUES ('$nama', '$desc','$gambar','$jam_buka', '$kontak','$kategori')";
+        $kuliner_query = "INSERT INTO kuliner (nama,`desc`,gambar,jam_buka,kontak,kategori,alamat,metode_pembayaran) VALUES ('$nama', '$desc','$filename','$jam_buka', '$kontak','$kategori','$alamat','$metode_pembayaran')";
 
         $kuliner_query_run = mysqli_query($con, $kuliner_query);
         if($kuliner_query_run)

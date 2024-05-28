@@ -36,13 +36,22 @@ include('../middleware/adminMiddleware.php');
                                 </div>
                             
                                 <div class="col-md-6 mt-3">
-                                    <label for="">Kategori</label>
-                                    <input type="text" name="kategori" class="form-control" id="">
+                                    <label for="">alamat</label>
+                                    <input type="text" name="alamat" class="form-control" id="">
                                 </div>
 
                                 <div class="col-md-6 mt-3">
                                     <label for="">Jam Buka</label>
                                     <input type="text" name="jam_buka" class="form-control" id="">
+                                </div>
+                                <div class="col-md-6 mt-3">
+                                    <label for="">kategori</label>
+                                    <input type="text" name="kategori" class="form-control" id="">
+                                </div>
+
+                                <div class="col-md-6 mt-3">
+                                    <label for="">metode pembayaran</label>
+                                    <input type="text" name="metode_pembayaran" class="form-control" id="">
                                 </div>
 
                                 <div class="col-md-6 mt-3">

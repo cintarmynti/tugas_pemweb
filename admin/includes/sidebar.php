@@ -29,7 +29,7 @@
      </li>
 
     <li class="nav-item">
-         <a class="nav-link" href="tambah-kuliner.php">
+         <a class="nav-link" href="tambah-wisata.php">
              <i class="fas fa-fw fa-table"></i>
              <span>Tambahkan Wisata</span></a>
      </li>
