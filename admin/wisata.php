@@ -1,77 +1,81 @@
 <!-- ini  header -->
-<?php 
-        include('includes/header.php');
-        include('../middleware/adminMiddleware.php');
-    ?>
-    <?php include('includes/sidebar.php') ?>
-    <?php include('includes/navbar.php') ?>
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
+<?php
+include('includes/header.php');
+include('../middleware/adminMiddleware.php');
+?>
+<?php include('includes/sidebar.php') ?>
+<?php include('includes/navbar.php') ?>
+<!-- Begin Page Content -->
+<div class="container-fluid">
 
-                    <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Tempat Wisata</h1>
-                    <p class="mb-4">Berikut ini adlah daftar tempat wisata yang ada di Magetan</p>
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Tempat Wisata</h1>
+    <p class="mb-4">Berikut ini adlah daftar tempat wisata yang ada di Magetan</p>
 
-                    <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
-                        
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>Id</th>
-                                            <th>Nama</th>
-                                            <th>alamat</th>
-                                            <th>jam_buka</th>
-                                            <th>action</th>
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
 
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Id</th>
-                                            <th>Nama</th>
-                                            <th>alamat</th>
-                                            <th>jam_buka</th>
-                                            <th>action</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                    <?php 
-                                                $wisata = getAll("wisata");
-                                                if(mysqli_num_rows($wisata) > 0)
-                                                {   
-                                                    foreach($wisata as $item){                                                        
-                                                    ?>
-                                                        <tr>
-                                                            <td><?= $item['id']; ?></td>
-                                                            <td><?= $item['nama']; ?></td>
-                                                            <td><?= $item['alamat']; ?></td>
-                                                            <td><?= $item['jam_buka']; ?></td>
-                                                            <td>
-                                                                <a class="btn btn-primary" href="edit-wisata.php?id=<?= $item['id']; ?>">Edit</a>
-                                                                <form action="code.php" method="POST">
-                                                                    <input type="hidden" name="wisata_id" value="<?= $item['id']; ?>">
-                                                                    <button type="submit" name="delete_wisata_btn" class="btn btn-danger">Delete</button>
-                                                                </form>
-                                                            </td>
-                                                          
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nama</th>
+                            <th>alamat</th>
+                            <th>jam_buka</th>
+                            <th>action</th>
 
-                                                        </tr>
-                                                    <?php
-                                                      }
-                                                }else{
-                                                    echo "No records Found";
-                                                }
-                                        ?>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nama</th>
+                            <th>alamat</th>
+                            <th>jam_buka</th>
+                            <th>action</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <?php
+                        $wisata = getAll("wisata");
+                        if (mysqli_num_rows($wisata) > 0) {
+                            foreach ($wisata as $item) {
+                        ?>
+                                <tr>
+                                    <td><?= $item['id']; ?></td>
+                                    <td><?= $item['nama']; ?></td>
+                                    <td><?= $item['alamat']; ?></td>
+                                    <td><?= $item['jam_buka']; ?></td>
+                                    <td>
+                                        <a class="btn btn-primary d-inline-block" href="edit-wisata.php?id=<?= $item['id']; ?>">
+                                            <i class="fa-regular fa-pen-to-square"></i>
+                                        </a>
+                                        <form action="code.php" method="POST" class="d-inline-block">
+                                            <input type="hidden" name="wisata_id" value="<?= $item['id']; ?>">
+                                            <button type="submit" name="delete_wisata_btn" class="btn btn-danger">
+                                                <i class="fa-regular fa-trash-can"></i>
+                                            </button>
+                                        </form>
+                                    </td>
 
-                </div>
 
-            <?php include('includes/footer.php') ?>
-            <?php include('includes/scripts.php') ?>
+
+                                </tr>
+                        <?php
+                            }
+                        } else {
+                            echo "No records Found";
+                        }
+                        ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<?php include('includes/footer.php') ?>
+<?php include('includes/scripts.php') ?>
