@@ -45,7 +45,9 @@
         $old_image = $_POST['old_image'];
 
         if($new_image != ''){
-            $update_filename = $new_image;
+            // $update_filename = $new_image;
+            $image_ext = pathinfo($new_image, PATHINFO_EXTENSION);
+            $update_filename = time().'.'.$image_ext;
         }else{
             $update_filename = $old_image;
         }
@@ -62,15 +64,17 @@
             echo "masuk gais";
             if($_FILES['gambar']['name'] != "")
             {
-                move_uploaded_file($_FILES['gambar']['tmp_name'], $path.'/'.$new_image);
+                move_uploaded_file($_FILES['gambar']['tmp_name'], $path.'/'.$update_filename);
                 if(file_exists("../uploads/".$old_image))
                 {
                     unlink("../uploads/".$old_image);
                 }
             }
             redirect("edit-wisata.php?id=$wisata_id", "Category Updated Successfully");
+        }else
+        {
+            redirect("edit-wisata.php?id=$wisata_id", "Category Went Wrong");
 
-            
         }
 
 
