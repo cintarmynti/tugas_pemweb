@@ -10,3 +10,15 @@ fetch('https://api.unsplash.com/photos/random/?count=5&client_id=52d8369eb3e2576
       `;
     });
   });
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    var navbar = document.getElementById("navbar");
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        navbar.classList.add("small", "solid"); // Menambah kelas untuk mengecilkan navbar
+    } else {
+        navbar.classList.remove("small", "solid"); // Menghapus kelas untuk mengembalikan navbar ke ukuran normal
+    }
+}
