@@ -28,6 +28,12 @@
              <i class="fas fa-fw fa-table"></i>
              <span>Tambahkan Wisata</span></a>
      </li>
+
+     <li class="nav-item">
+         <a class="nav-link" href="wisata.php">
+             <i class="fas fa-fw fa-table"></i>
+             <span>All Wisata</span></a>
+     </li>
      <!-- Nav Item - Tables -->
      <li class="nav-item">
          <a class="nav-link" href="tables.html">
