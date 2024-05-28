@@ -22,23 +22,29 @@
      <!-- Divider -->
      <hr class="sidebar-divider">
 
-    
+     <li class="nav-item">
+         <a class="nav-link" href="wisata.php">
+             <i class="fas fa-fw fa-table"></i>
+             <span>Daftar Tempat Wisata</span></a>
+     </li>
+
     <li class="nav-item">
-         <a class="nav-link" href="tambah-wisata.php">
+         <a class="nav-link" href="tambah-kuliner.php">
              <i class="fas fa-fw fa-table"></i>
              <span>Tambahkan Wisata</span></a>
      </li>
 
-     <li class="nav-item">
-         <a class="nav-link" href="wisata.php">
-             <i class="fas fa-fw fa-table"></i>
-             <span>All Wisata</span></a>
-     </li>
      <!-- Nav Item - Tables -->
      <li class="nav-item">
-         <a class="nav-link" href="tables.html">
+         <a class="nav-link" href="kuliner.php">
              <i class="fas fa-fw fa-table"></i>
-             <span>Tables</span></a>
+             <span>Daftar Tempat Kuliner</span></a>
+     </li>
+
+     <li class="nav-item">
+         <a class="nav-link" href="tambah-kuliner.php">
+             <i class="fas fa-fw fa-table"></i>
+             <span>Tambahkan Kuliner</span></a>
      </li>
 
      <!-- Divider -->

@@ -3,8 +3,7 @@
     session_start();
     include('../config/dbcon.php');
     include('../functions/myfunctions.php');
-    if(isset($_POST['tambah_wisata_btn']))
-    {
+    if(isset($_POST['tambah_wisata_btn'])){
         $nama = $_POST['nama'];
         $desc = $_POST['desc'];
         $alamat = $_POST['alamat'];
@@ -101,6 +100,30 @@
         }else{
             redirect("wisata.php", "Something went wrong");
 
+        }
+    }else if(isset($_POST['tambah_kuliner_btn'])){
+        $nama = $_POST['nama'];
+        $kontak = $_POST['kontak'];
+        $kategori = $_POST['kategori'];
+        $jam_buka = $_POST['jam_buka'];
+        $desc = $_POST['desc'];
+        $gambar = $_FILES['gambar_kuliner']['name'];
+
+        $path = "../uploads";
+        
+        $image_ext = pathinfo($gambar, PATHINFO_EXTENSION);
+        $filename = time().'.'.$image_ext;
+
+        $kuliner_query = "INSERT INTO kuliner (nama,`desc`,gambar,jam_buka,kontak,kategori) VALUES ('$nama', '$desc','$gambar','$jam_buka', '$kontak','$kategori')";
+
+        $kuliner_query_run = mysqli_query($con, $kuliner_query);
+        if($kuliner_query_run)
+        {
+            move_uploaded_file($_FILES['gambar_kuliner']['tmp_name'], $path.'/'.$filename);
+            redirect("tambah-kuliner.php", "Kuliner added success");
+        }else
+        {
+            redirect("tambah-kuliner.php", "Something went wrong");
         }
     }
 
