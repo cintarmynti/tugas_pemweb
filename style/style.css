@@ -310,11 +310,13 @@ body, html {
   margin-left: 40px;
 }
 
-.wisatapreview h2{
+.wisatapreview h2 a{
   margin-right: 30px;
   margin-bottom: 0;
   font-size: 35px;
   font-weight: 300;
+  color: black;
+  text-decoration: none;
 }
 
 .wisatapreview p{
@@ -344,12 +346,25 @@ body, html {
 }
 
 .kulinerpreview{
-  display: flex;
-  justify-content: center;
-  margin-left: 40px;
+  margin-bottom: 30px;
 }
 
-.kulinerpreview tex1{
+.satu{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-left: 40px;
+  margin-bottom: 20px;
 }
+
+.satu p{
+  margin-top: 90px;
+  margin-right: 50px;
+}
+
+.satu p a{
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+}
+
