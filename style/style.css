@@ -50,7 +50,7 @@ body, html {
   color: black;
 }
 
-.navbar.small .home {
+.navbar.small .home a {
   padding: 10px 10px;
   font-size: 15px; /* Sesuaikan ukuran font logo */
   color: #000;
@@ -104,12 +104,20 @@ body, html {
   border-color: rgb(255, 255, 255); /* Menampilkan border hitam saat hover */
 }
 
-.home {
-  color: white;
+.home{
   flex: 1;
   text-align: right; 
   margin-right: 50px;
   padding: 20px 20px;
+}
+
+.home a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.home a:hover{
+  text-decoration: underline;
 }
 
 .hero {

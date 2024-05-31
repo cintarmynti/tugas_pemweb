@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@100;200;300;400;500;600;700;800;900&display=swap'); /*font untuk teks hero*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto Serif', serif;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  top: 0;
+  justify-content: space-between; 
+  background: rgba(255, 255, 255, 0); 
+  padding: 30px;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  z-index: 1000;  
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar.solid {
+  background-color: white; /* Ubah background jadi solid */
+  border-bottom: 1px solid #ccc; /* Tambahkan border bawah */
+}
+
+.navbar.small {
+  height: 50px; /* Atur tinggi navbar yang mengecil */
+  padding: 5px 20px; /* Sesuaikan padding */
+}
+
+.navbar.small .logo {
+  padding: 10px 10px;
+  font-size: 20px; /* Sesuaikan ukuran font logo */
+  color: #000;
+}
+
+.navbar.small .menu{
+  border: 3px solid rgb(0, 0, 0); 
+  border-radius: 25px;
+}
+
+.navbar.small .menu ul li a {
+  padding: 5px 10px; /* Sesuaikan padding link */
+  color: black;
+}
+
+.navbar.small .home a {
+  padding: 10px 10px;
+  font-size: 15px; /* Sesuaikan ukuran font logo */
+  color: #000;
+}
+
+.logo {
+  color: white;
+  flex: 1;
+  margin-left: 55px;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 20px 20px;
+  font-size: 25px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 500;
+  border: 3px solid rgb(255, 255, 255); 
+  border-radius: 25px;
+  padding: 1px 10px; 
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu ul li {
+  margin: 0 10px; /* Menambahkan margin antara setiap item menu */
+}
+
+.menu ul li a {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 16px; /*Menyesuaikan padding untuk memberikan ruang di sekitar teks */
+  border-radius: 15px; /* Mengatur sudut lengkung border */
+  border: 2px solid transparent; /* Menyembunyikan border awal dengan warna transparan */
+  transition: border-color 0.3s ease; /* Efek transisi untuk smooth hover */
+}
+
+.menu ul li a:hover {
+  border-color: rgb(255, 255, 255); /* Menampilkan border hitam saat hover */
+}
+
+.home{
+  flex: 1;
+  text-align: right; 
+  margin-right: 50px;
+  padding: 20px 20px;
+}
+
+.home a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: url('/assets/Frame2.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+#homepage1{
+    background-color: #886868;
+    height: max-content;
+}
+
+.background2{
+    height: 150%;
+    background-color: #D9D9D9;
+}
+
+.background2 img{
+    height: 50px;
+    width: 50px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+  
+footer a {
+color: #fff;
+text-decoration: none;
+margin: 0 10px;
+}
+
+footer a:hover {
+text-decoration: underline;
+}
+  
