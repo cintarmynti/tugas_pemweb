@@ -319,6 +319,10 @@ body, html {
   text-decoration: none;
 }
 
+.wisatapreview h2 a:hover{
+  text-decoration:underline;
+}
+
 .wisatapreview p{
   margin-right: 20px;
   margin-top: 10px;
@@ -366,5 +370,26 @@ body, html {
   font-size: 25px;
   color: #fff;
   text-decoration: none;
+}
+
+.satu p a:hover{
+  text-decoration: underline; 
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
