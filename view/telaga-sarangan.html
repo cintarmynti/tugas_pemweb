@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telaga Sarangan</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="/styles/styles.css">
-    <title>Destinasi Wisata</title>
+    <link rel="stylesheet" href="/styles/style-new-page.css">
 </head>
 <body>
     <!-- navbar -->
@@ -17,16 +17,19 @@
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Magetan Travel Guide</h5>
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="offcanvas-body">
+            <div class="offcanvas-body mx-auto">
               <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link mx-lg-2 active" aria-current="page" href="#">Destinasi Wisata</a>
+                  <a class="nav-link mx-lg-2" aria-current="page" href="/view/tempat-wisata copy.html">Destinasi Wisata</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link mx-lg-2" href="#">Tempat Makan</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link mx-lg-2" href="#">Penginapan</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-lg-2 " href="#">Beranda</a>
                 </li>
               </ul>
             </div>
@@ -38,35 +41,26 @@
             </button>
         </div>
     </nav>
+    <div class="container-fluid banner">
+        <div class="container text-center">
+            <h4 class="display-6">Selamat Datang Di Telaga Sarangan</h4>
+            <h3 class="display-3">Nikmati pesonanya</h3>
+            <a href="#deskripsi">
+                <button type="button" class="btn btn-danger btn-lg">Menuju</button>
+            </a>
+        </div>
+    </div>
+    <div class="container-fluid deskripsi pt-5 pb-5">
+        <div class="container text-center">
+            <h2 class="display-3" id="deskripsi">
+                Deskripsi
+            </h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat corporis, commodi laudantium fugit adipisci magni, suscipit odit vero quasi delectus atque ea, consequuntur tenetur. Laborum dolorem cum quidem deleniti! Quidem.</p>
 
-    
-    
-    <!-- gambar telaga -->
-    <section class="hero-section">
-      <!-- list destinasi wisata -->
-      <div class="container py-5">   
-        <div class="row row-cols-1 row-cols-md-3 g-4 py-5">
-            <div class="col">
-              <div class="card mt-5" style="width: 18rem;">
-                <img src="/images/telaga-sarangan.jpeg" class="card-img-top p-3 rounded-5" alt="">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Telaga Sarangan</h5>
-                  <div class="d-flex justify-content-around">
-                      <!-- <button class="btn btn-primary">
-                          menuju
-                      </button> -->
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-        </div>  
-      </div>
-    </section>
+        </div>
+    </div>
 
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
-
-<!-- "container d-flex align-items-center justify-content-center fs-1 text-white flex-colum"> -->

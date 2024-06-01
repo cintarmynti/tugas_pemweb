@@ -1,0 +1,81 @@
+.navbar {
+    background-color: #ffffff;
+    height: 80p;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
+}
+.navbar-brand {
+    font-weight: 500;
+    color: rgb(204, 16, 16);
+    font-size: 24px;
+    transition: 0.3s color;
+}
+
+.login-button { 
+    background-color: rgb(59, 59, 59);
+    color: #ffffff;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0,3s background-color;
+}
+.login-button:hover { 
+    background-color: rgb(44, 44, 44);
+
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+    
+}
+.navbar-toggler:focus, .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+.nav-link {
+    border: #8a0707;
+    color: black;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: red;
+
+}
+@media (min-width: 991px){
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0%;
+        height: 2px;
+        background-color: rgb(59, 59, 59);;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+
+    }
+    .nav-link:hover::before, .nav-link.active::before { 
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+.banner {
+    background: url(/images/telaga-sarangan.png) no-repeat center center;
+
+    background-size: cover;
+    width: 100%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    color: #ffffff;
+
+
+}
+
+
