@@ -127,6 +127,80 @@
         {
             redirect("tambah-kuliner.php", "Something went wrong");
         }
+    }else if(isset($_POST['update_kuliner_btn'])){
+        $kuliner_id = $_POST['kuliner_id'];
+        var_dump($kuliner_id);
+        $nama = $_POST['nama'];
+        $kontak = $_POST['kontak'];
+        $kategori = $_POST['kategori'];
+        $jam_buka = $_POST['jam_buka'];
+        $desc = $_POST['desc'];
+        $alamat = $_POST['alamat'];
+        $metode_pembayaran = $_POST['metode_pembayaran'];
+
+
+        $new_image = $_FILES['gambar_kuliner']['name'];
+        $old_image = $_POST['old_image'];
+
+        print_r($_POST);
+        print_r($_FILES['gambar_kuliner']);
+
+        if($new_image != ''){
+            // $update_filename = $new_image;
+            $image_ext = pathinfo($new_image, PATHINFO_EXTENSION);
+            $update_filename = time().'.'.$image_ext;
+        }else{
+            $update_filename = $old_image;
+        }
+
+        $path = "../uploads";
+
+
+        $update_query = "UPDATE kuliner SET nama='$nama', kontak='$kontak', kategori='$kategori', jam_buka='$jam_buka', `desc`='$desc', alamat='$alamat', metode_pembayaran='$metode_pembayaran', gambar='$update_filename' WHERE id='$kuliner_id'";
+
+        $update_query_run = mysqli_query($con, $update_query);
+
+        if($update_query_run)
+        {
+            echo "masuk gais";
+            if($_FILES['gambar']['name'] != "")
+            {
+                move_uploaded_file($_FILES['gambar']['tmp_name'], $path.'/'.$update_filename);
+                if(file_exists("../uploads/".$old_image))
+                {
+                    unlink("../uploads/".$old_image);
+                }
+            }
+            
+            redirect("edit-kuliner.php?id=$kuliner_id", "kuliner Updated Successfully");
+        }else
+        {
+            redirect("edit-kuliner.php?id=$kuliner_id", "kuliner Went Wrong");
+
+        }
+    }else if(isset($_POST['delete_kuliner_btn'])){
+        $kuliner_id = mysqli_real_escape_string($con, $_POST['kuliner_id']);
+
+        $kuliner_query = "SELECT * FROM kuliner WHERE id='$kuliner_id'";
+        $kuliner_query_run = mysqli_query($con, $kuliner_query);
+        $kuliner_data = mysqli_fetch_array($kuliner_query_run);
+        $image = $kuliner_data['gambar'];
+
+        $delete_query = "DELETE FROM kuliner WHERE id='$kuliner_id'";
+        $delete_query_run = mysqli_query($con, $delete_query);
+
+        if($delete_query_run)
+        {   
+            if(file_exists("../uploads/".$image))
+            {
+                unlink("../uploads/".$image);
+            }
+            redirect("kuliner.php", "kuliner Deleted Successfully");
+               
+        }else{
+            redirect("kuliner.php", "Something went wrong");
+
+        }
     }
 
 ?>

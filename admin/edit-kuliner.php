@@ -74,7 +74,7 @@ include('../middleware/adminMiddleware.php');
                                         </div>
 
                                         <div class="col-md-12">
-                                            <button type="submit" class="btn btn-primary" name="tambah_kuliner_btn">Update</button>
+                                            <button type="submit" class="btn btn-primary" name="update_kuliner_btn">Update</button>
                                         </div>
 
 
