@@ -47,6 +47,20 @@
              <span>Tambahkan Kuliner</span></a>
      </li>
 
+       <!-- Nav Item - Tables -->
+       <li class="nav-item">
+         <a class="nav-link" href="penginapan.php">
+             <i class="fas fa-fw fa-table"></i>
+             <span>Daftar Tempat Penginapan</span></a>
+     </li>
+
+     <li class="nav-item">
+         <a class="nav-link" href="tambah-penginapan.php">
+             <i class="fas fa-fw fa-table"></i>
+             <span>Tambahkan Penginapan</span></a>
+     </li>
+
+
      <!-- Divider -->
      <hr class="sidebar-divider d-none d-md-block">
 

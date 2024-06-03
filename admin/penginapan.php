@@ -9,8 +9,8 @@ include('../middleware/adminMiddleware.php');
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Daftar Kuliner</h1>
-    <p class="mb-4">Berikut ini adlah daftar tempat kuliner yang ada di Magetan</p>
+    <h1 class="h3 mb-2 text-gray-800">Daftar Penginapan</h1>
+    <p class="mb-4">Berikut ini adlah daftar tempat penginapan yang ada di Magetan</p>
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
@@ -26,7 +26,7 @@ include('../middleware/adminMiddleware.php');
                             <th>alamat</th>
                             <th>gambar</th>
                             <th>kontak</th>
-                            <th>fasilitas</th>
+                            <th>action</th>
                         </tr>
                     </thead>
                     <tfoot>
@@ -37,7 +37,7 @@ include('../middleware/adminMiddleware.php');
                             <th>alamat</th>
                             <th>gambar</th>
                             <th>kontak</th>
-                            <th>fasilitas</th>
+                            <th>action</th>
                         </tr>
                     </tfoot>
                     <tbody>
@@ -50,7 +50,10 @@ include('../middleware/adminMiddleware.php');
                                     <td><?= $item['id']; ?></td>
                                     <td><?= $item['nama']; ?></td>
                                     <td><?= $item['alamat']; ?></td>
-                                    <td><?= $item['jam_buka']; ?></td>
+                                    <td></td>
+                                    <td><?= $item['kontak'] ?></td>
+                                    <td><?= $item['fasilitas'] ?></td>
+
                                     <td>
                                         <a class="btn btn-primary d-inline-block" href="edit-penginapan.php?id=<?= $item['id']; ?>">
                                             <i class="fa-regular fa-pen-to-square"></i>
