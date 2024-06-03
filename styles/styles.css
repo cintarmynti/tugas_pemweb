@@ -46,6 +46,9 @@ img {
   height: auto;
 }
 
+body::-webkit-scrollbar{
+  display: none;
+}
 
 .navbar {
     background-color: #ffffff;
