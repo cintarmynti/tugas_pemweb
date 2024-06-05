@@ -20,7 +20,7 @@
             <div class="offcanvas-body mx-auto">
               <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link mx-lg-2" aria-current="page" href="/views/destinasiwisata.html">Destinasi Wisata</a>
+                  <a class="nav-link mx-lg-2" aria-current="page" href="/destinasiwisata/index.php">Destinasi Wisata</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link mx-lg-2" href="/views/tempatmakan.html">Tempat Makan</a>
@@ -76,13 +76,13 @@
         <a href="#slide-3">3</a>
       <div class="slides">
           <div id="slide-1">
-          <img src="/assets/Rectangle3.png" alt="">
+          <img src='/assets/Rectangle3.png' alt="">
           </div>
           <div id="slide-2">
-          <img src="/assets/Rectangle4.png" alt="">
+          <img src="./assets/Rectangle4.png" alt="">
           </div>
           <div id="slide-3">
-          <img src="/assets/Rectangle5.png" alt="">
+          <img src="./assets/Rectangle5.png" alt="">
           </div>
       </div>
       </div>
