@@ -10,38 +10,8 @@
 </head>
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top mx-auto">
-        <div class="container-fluid">
-          <a class="navbar-brand me-auto" href="#">Magetan</a>
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Magetan Travel Guide</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body mx-auto">
-              <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link mx-lg-2" aria-current="page" href="/views/destinasiwisata.html">Destinasi Wisata</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-lg-2" href="/views/tempatmakan.html">Tempat Makan</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-lg-2 active" href="penginapan.html">Penginapan</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-lg-2 " href="/views/index.html">Beranda</a>
-                </li>
-              </ul>
-            </div>
-            
-          </div>
-          <a href="#" class="login-button">Login</a>
-            <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-    </nav>
+    <?php include('../../includes/navbar.php') ?>
+
 
     <div class="container-fluid banner">
         <div class="content d-flex align-items-center justify-content-center fs-1 flex-column text-white">
@@ -54,7 +24,7 @@
         <h2 class="section__header">Penginapan</h2>
         <div class="popular__grid">
           <div class="popular__card">
-            <a href="https://maps.app.goo.gl/ArcggYuHAMznQWNR9"><img src="/assets/Penginapan Maospati 2.jpg" alt="popular hotel" /></a>
+            <a href="https://maps.app.goo.gl/ArcggYuHAMznQWNR9"><img src="../../assets/img/Penginapan Maospati 2.jpg" alt="popular hotel" /></a>
             <div class="popular__content">
               <div class="popular__card__header">
                 <h4>Penginapan Maospati</h4>
@@ -63,7 +33,7 @@
             </div>
           </div>
           <div class="popular__card">
-            <a href="https://maps.app.goo.gl/sfWMY4swwEBQPcu49"><img src="/assets/Econique Sarangan Resort.jpg" alt="popular hotel" /></a>
+            <a href="https://maps.app.goo.gl/sfWMY4swwEBQPcu49"><img src="../../assets/img/Econique Sarangan Resort.jpg" alt="popular hotel" /></a>
             <div class="popular__content">
               <div class="popular__card__header">
                 <h4>Econique Sarangan Resort</h4>
@@ -72,7 +42,7 @@
             </div>
           </div>
           <div class="popular__card">
-            <a href="https://maps.app.goo.gl/BLwvspXEXXYXc7ib9"><img src="/assets/Mapan guest house.jpg" alt="popular hotel" /></a>
+            <a href="https://maps.app.goo.gl/BLwvspXEXXYXc7ib9"><img src="../../assets/img/Mapan guest house.jpg" alt="popular hotel" /></a>
             <div class="popular__content">
               <div class="popular__card__header">
                 <h4>Mapan Guest House</h4>
@@ -81,7 +51,7 @@
             </div>
           </div>
           <div class="popular__card">
-            <a href="https://maps.app.goo.gl/hMYgx7pbbj3zPhG16"><img src="/assets/Villa adem ayem.jpg" alt="popular hotel" /></a>
+            <a href="https://maps.app.goo.gl/hMYgx7pbbj3zPhG16"><img src="../../assets/img/Villa adem ayem.jpg" alt="popular hotel" /></a>
             <div class="popular__content">
               <div class="popular__card__header">
                 <h4>Villa Adem Ayem</h4>
@@ -90,7 +60,7 @@
             </div>
           </div>
           <div class="popular__card">
-            <a href="https://maps.app.goo.gl/HF6rtZp2wGKrZVxb6"><img src="/assets/1094080844_WxH.jpg" alt="popular hotel" /></a>
+            <a href="https://maps.app.goo.gl/HF6rtZp2wGKrZVxb6"><img src="../../assets/img/1094080844_WxH.jpg" alt="popular hotel" /></a>
             <div class="popular__content">
               <div class="popular__card__header">
                 <h4>OYO Oemah Djowo Resort</h4>
@@ -99,7 +69,7 @@
             </div>
           </div>
           <div class="popular__card">
-            <a href="https://maps.app.goo.gl/4GEdYSrLejvcXQ6D7"><img src="/assets/OYO 1773 Ilyasa Family.jpg" alt="popular hotel" /></a>
+            <a href="https://maps.app.goo.gl/4GEdYSrLejvcXQ6D7"><img src="../../assets/img/OYO 1773 Ilyasa Family.jpg" alt="popular hotel" /></a>
             <div class="popular__content">
               <div class="popular__card__header">
                 <h4>OYO Telaga Mas</h4>
@@ -124,7 +94,5 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
-</html>
 </body>
 </html>

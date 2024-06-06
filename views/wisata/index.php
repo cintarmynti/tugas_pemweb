@@ -8,39 +8,7 @@
     <title>Destinasi Wisata</title>
 </head>
 <body>
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand me-auto" href="#">Magetan</a>
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Magetan Travel Guide</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body mx-auto">
-              <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link mx-lg-2 active" aria-current="page" href="#">Destinasi Wisata</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-lg-2" href="/views/tempatmakan.html">Tempat Makan</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-lg-2" href="/views/penginapan.html">Penginapan</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link mx-lg-2 " href="/views/index.html">Beranda</a>
-                </li>
-              </ul>
-            </div>
-            
-          </div>
-          <a href="#" class="login-button">Login</a>
-            <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-    </nav>
+    <?php include('../../includes/navbar.php') ?>
 
     <div class="container-fluid banner">
       <div class="content d-flex align-items-center justify-content-center fs-1 flex-column text-white">
@@ -51,7 +19,7 @@
     <div class="container mx-auto pb-5">   
       <div class="card__container mx-auto mt-5 pb-5">
         <article class="card__article">
-          <img src="/assets/telaga-sarangan- (2).jpg" alt="" class="card__img">
+          <img src="../../assets/img/telaga-sarangan- (2).jpg" alt="" class="card__img">
           <div class="card__data">
             <span class="card__description"></span>
             <h2 class="card__title">Telaga Sarangan</h2>
@@ -60,7 +28,7 @@
         </article>
 
         <article class="card__article">
-          <img src="/assets/telaga-wahyu.jpg" alt="" class="card__img">
+          <img src="../../assets/img/telaga-wahyu.jpg" alt="" class="card__img">
           <div class="card__data">
             <span class="card__description"></span>
             <h2 class="card__title">Telaga Wahyu</h2>
@@ -69,7 +37,7 @@
         </article>
 
         <article class="card__article">
-          <img src="/assets/bukit-mongkrang.jpeg" alt="" class="card__img">
+          <img src="../../assets/img/bukit-mongkrang.jpeg" alt="" class="card__img">
           <div class="card__data">
             <span class="card__description"></span>
             <h2 class="card__title">Gunung Mongkrang</h2>
@@ -78,7 +46,7 @@
         </article>
 
         <article class="card__article">
-          <img src="/assets/mojosemi-park.jpg" alt="" class="card__img">
+          <img src="../../assets/img/mojosemi-park.jpg" alt="" class="card__img">
           <div class="card__data">
             <span class="card__description"></span>
             <h2 class="card__title">Mojosemi Park</h2>
@@ -87,7 +55,7 @@
         </article>
 
         <article class="card__article">
-          <img src="/assets/geni-langit.jpeg" alt="" class="card__img">
+          <img src="../../assets/img/geni-langit.jpeg" alt="" class="card__img">
           <div class="card__data">
             <span class="card__description"></span>
             <h2 class="card__title">Geni Langit</h2>
@@ -96,7 +64,7 @@
         </article>
 
         <article class="card__article">
-          <img src="/assets/Cemoro-Sewu.jpg" alt="" class="card__img">
+          <img src="../../assets/img/Cemoro-Sewu.jpg" alt="" class="card__img">
           <div class="card__data">
             <span class="card__description"></span>
             <h2 class="card__title">Cemoro Sewu</h2>
@@ -108,16 +76,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/38be933f5f.js" crossorigin="anonymous"></script>
 
-    <footer>
-      <p>&copy; copyright 2024 Kelompok 6 Pemrograman Web A-081</p>
-      <p>
-          <a href="/views/index.html">Home</a> |
-          <a href="#about">About Us</a> |
-          <a href="#contact">Contact</a>
-      </p>
-    </footer>
-</body>
-
-</html>
+<?php include('../../includes/footer.php') ?>
 
 <!-- "container d-flex align-items-center justify-content-center fs-1 text-white flex-colum"> -->
