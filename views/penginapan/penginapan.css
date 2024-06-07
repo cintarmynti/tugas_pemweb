@@ -120,7 +120,7 @@ body::-webkit-scrollbar{
 }
 
 .banner {
-    background: url(./assets/magetan-sarangan.jpg) no-repeat center center;
+    background: url('../../assets/img/magetan-sarangan.jpg') no-repeat center center;
     background-size: cover;
     width: 100%;
     padding-top: 20%;
