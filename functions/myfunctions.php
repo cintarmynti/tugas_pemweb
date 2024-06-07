@@ -1,8 +1,6 @@
 <?php
 
-    include("../config/dbcon.php");
-
-  
+    include(__DIR__ . '/../config/dbcon.php'); 
 
     function redirect($url, $message){
         $_SESSION['message'] = $message;
