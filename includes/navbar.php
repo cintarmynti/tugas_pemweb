@@ -9,16 +9,16 @@
             <div class="offcanvas-body mx-auto">
               <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link mx-lg-2" aria-current="page" href="/tugas_pemweb/views/wisata/index.php">Destinasi Wisata</a>
+                  <a class="nav-link mx-lg-2" aria-current="page" href="/views/wisata/index.php">Destinasi Wisata</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link mx-lg-2" href="/tugas_pemweb/views/kuliner/index.php">Tempat Makan</a>
+                  <a class="nav-link mx-lg-2" href="/views/kuliner/index.php">Tempat Makan</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link mx-lg-2" href="/tugas_pemweb/views/penginapan/index.php">Penginapan</a>
+                  <a class="nav-link mx-lg-2" href="/views/penginapan/index.php">Penginapan</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link mx-lg-2" href="/tugas_pemweb/index.php">Beranda</a>
+                  <a class="nav-link mx-lg-2" href="/index.php">Beranda</a>
                 </li>
               </ul>
             </div>

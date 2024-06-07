@@ -6,7 +6,7 @@
     <title>Geni Langit</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/styles/style-new-page.css">
+    <link rel="stylesheet" href="./style-new-page.css">
 </head>
 <body>
     <!-- navbar -->
@@ -108,21 +108,21 @@
         <h2 class="text-center section__header">What our client say</h2>
         <div class="mx-auto ml-3 mr-3 client__grid">
           <div class="card mx-auto pl-5 ml-3 client__card" style="width: 18rem;">
-            <img src="/images/client-1.jpg" alt="client" />
+            <img src="../../assets/img/client-1.jpg" alt="client" />
             <p>
               The booking process was seamless, and the confirmation was
               instant. I highly recommend WDM&Co for hassle-free hotel bookings.
             </p>
           </div>
           <div class="card mx-auto ml-3 client__card" style="width: 18rem;">
-            <img src="/images/client-2.jpg" alt="client" />
+            <img src="../../assets/img/client-2.jpg" alt="client" />
             <p>
               The website provided detailed information about hotel, including
               amenities, photos, which helped me make an informed decision.
             </p>
           </div>
           <div class="card mx-auto client__card" style="width: 18rem;">
-            <img src="/images/client-3.jpg" alt="client" />
+            <img src="../../assets/img/client-3.jpg" alt="client" />
             <p>
               I was able to book a room within minutes, and the hotel exceeded
               my expectations. I appreciate WDM&Co's efficiency and reliability.
