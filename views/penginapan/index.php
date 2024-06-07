@@ -1,4 +1,6 @@
 <?php session_start(); ?>
+<?php include('../../functions/myfunctions.php') ?>
+
 <!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,60 +25,27 @@
     <section class="section__container popular__container">
         <h2 class="section__header">Penginapan</h2>
         <div class="popular__grid">
+        <?php
+          $penginapan = getAll("penginapan");
+          $id = 1;
+          if (mysqli_num_rows($penginapan) > 0) {
+              foreach ($penginapan as $item) {
+        ?>
           <div class="popular__card">
-            <a href="https://maps.app.goo.gl/ArcggYuHAMznQWNR9"><img src="../../assets/img/Penginapan Maospati 2.jpg" alt="popular hotel" /></a>
+            <a href="https://maps.app.goo.gl/ArcggYuHAMznQWNR9"><img src="../../uploads/<?php echo $item['gambar']; ?>" alt="popular hotel" /></a>
             <div class="popular__content">
               <div class="popular__card__header">
-                <h4>Penginapan Maospati</h4>
+                <h4><?php echo $item['nama']; ?></h4>
               </div>
-              <p>Jalan Raya Solo RW. 06, RT.06/RW.01, Sanggrahan, Kec. Maospati, Kabupaten Magetan, Jawa Timur 63392</p>
+              <p><?php echo $item['alamat']; ?></p>
             </div>
           </div>
-          <div class="popular__card">
-            <a href="https://maps.app.goo.gl/sfWMY4swwEBQPcu49"><img src="../../assets/img/Econique Sarangan Resort.jpg" alt="popular hotel" /></a>
-            <div class="popular__content">
-              <div class="popular__card__header">
-                <h4>Econique Sarangan Resort</h4>
-              </div>
-              <p>Jl. Lkr. Telaga, RT.006 Rw001, Telaga Pasir, Sarangan, Kec. Plaosan, Kabupaten Magetan, Jawa Timur 63361</p>
-            </div>
-          </div>
-          <div class="popular__card">
-            <a href="https://maps.app.goo.gl/BLwvspXEXXYXc7ib9"><img src="../../assets/img/Mapan guest house.jpg" alt="popular hotel" /></a>
-            <div class="popular__content">
-              <div class="popular__card__header">
-                <h4>Mapan Guest House</h4>
-              </div>
-              <p>Jl. Samudra No.58, Dusun Carat, Bulukerto, Kec. Magetan, Kabupaten Magetan, Jawa Timur 63351</p>
-            </div>
-          </div>
-          <div class="popular__card">
-            <a href="https://maps.app.goo.gl/hMYgx7pbbj3zPhG16"><img src="../../assets/img/Villa adem ayem.jpg" alt="popular hotel" /></a>
-            <div class="popular__content">
-              <div class="popular__card__header">
-                <h4>Villa Adem Ayem</h4>
-              </div>
-              <p>JL Telaga Sarangan, RT. 06 RW. 01, Sarangan, Sarangan I, Sarangan, Magetan, Kabupaten Magetan, Jawa Timur 63361</p>
-            </div>
-          </div>
-          <div class="popular__card">
-            <a href="https://maps.app.goo.gl/HF6rtZp2wGKrZVxb6"><img src="../../assets/img/1094080844_WxH.jpg" alt="popular hotel" /></a>
-            <div class="popular__content">
-              <div class="popular__card__header">
-                <h4>OYO Oemah Djowo Resort</h4>
-              </div>
-              <p>Jalan Raya Sarangan RT.01/RW.01, Sarangan I, Sarangan, Kec. Tawangmangu, Kabupaten Magetan, Jawa Timur 63361</p>
-            </div>
-          </div>
-          <div class="popular__card">
-            <a href="https://maps.app.goo.gl/4GEdYSrLejvcXQ6D7"><img src="../../assets/img/OYO 1773 Ilyasa Family.jpg" alt="popular hotel" /></a>
-            <div class="popular__content">
-              <div class="popular__card__header">
-                <h4>OYO Telaga Mas</h4>
-              </div>
-              <p> Jl. Raya Telaga Sarangan, RT.07/RW.01, Ngluweng, Sarangan, Kec. Plaosan, Kabupaten Magetan, Jawa Timur 63361</p>
-            </div>
-          </div>
+          <?php
+            }
+        } else {
+            echo "No records Found";
+        }
+        ?>
         </div>
       </section>
   

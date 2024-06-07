@@ -1,4 +1,5 @@
 <?php session_start(); ?>
+<?php include('../../functions/myfunctions.php') ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,64 +18,22 @@
   <section id="homepage1">
     <div class="hero">
         <div class="contoh">
+            <?php
+                $wisata = getAll("kuliner");
+                $id = 1;
+                if (mysqli_num_rows($wisata) > 0) {
+                    foreach ($wisata as $item) {
+            ?>
             <div class="kelas">
-                <img src="../../assets/img/wisata-kuliner-magetan.jpeg" alt="">
-                <a href="https://maps.app.goo.gl/LwcfEWqJ3fwxJCPL6"><div class="overlay">Wisata Kuliner Magetan</div></a>
+                <img src="../../uploads/<?php echo $item['gambar']; ?>" alt="">
+                <a href="https://maps.app.goo.gl/LwcfEWqJ3fwxJCPL6"><div class="overlay"><?php echo $item['nama']; ?></div></a>
             </div>
-            <div class="kelas">
-                <img src="../../assets/img/bekicot-magetan.jpeg" alt="">
-                <a href="https://maps.app.goo.gl/dGedU1tdPNtLmNVb7
-                "><div class="overlay">Bekicot Magetan</div></a>
-            </div>
-            <div class="kelas">
-                <img src="../../assets/img/sop-buntut-dan-est-teler-jeng-sri.jpeg" alt="">
-                <a href="https://maps.app.goo.gl/mY1vKNui1p8wnB9L6
-                "><div class="overlay">Sop Buntut dan <br> Es Teler Jeng Sri</div></a>
-            </div>
-            <div class="kelas">
-                <img src="../../assets/img/warung-nasi-pecel-bu-parti.jpeg" alt="">
-                <a href="https://maps.app.goo.gl/nWtvM49s4CV841Bv9
-                "><div class="overlay">Warung Nasi Pecel <br> Bu Parti</div></a>
-            </div>
-            <div class="kelas">
-                <img src="../../assets/img/korean-grill.png" alt="">
-                <a href="https://maps.app.goo.gl/NWz4ATakdQJ4Wabc9
-                "><div class="overlay">kedai RESEP KUNO <br>(korean and javanesse grill)</div></a>
-            </div>
-            <div class="kelas">
-                <img src="../../assets/img/rumah-kuliner-kang-ethes.jpeg" alt="">
-                <a href="https://maps.app.goo.gl/1Q8YkHvUUU8RYZzk8
-                "><div class="overlay">Rumah Kuliner Kang Ethes</div></a>
-            </div>
-            <div class="kelas">
-                <img src="../../assets/img/bambu-muda.jpeg" alt="">
-                <a href="https://maps.app.goo.gl/eSegiU765VKmwxP29
-                "><div class="overlay">Bambu Muda</div></a>
-            </div>
-            <div class="kelas">
-                <img src="../../assets/img/rm-pawon-sewu.jpeg" alt="">
-                <a href="https://maps.app.goo.gl/ukkECdPE2oWohspP8
-                "><div class="overlay">Rumah Makan <br> Pawon Sewu</div></a>
-            </div>
-            <div class="kelas">
-                <img src="../../assets/img/sambelan-layah.jpeg" alt="">
-                <a href="https://maps.app.goo.gl/1FVLV2cVagGmv73T8
-                "><div class="overlay">Sambelan Layah <br> Asli Magetan</div></a>
-            </div>
-            <div class="kelas">
-                <img src="../../assets/img/restoran-joglonekarto.jpeg" alt="">
-                <a href="https://maps.app.goo.gl/s4CikHW1dbvBtBwi8
-                "><div class="overlay">Restoran Joglonekarto</div></a>
-            </div><div class="kelas">
-                <img src="../../assets/img/mammie.png" alt="">
-                <a href="https://maps.app.goo.gl/WyABEHgB9o6D531U9
-                "><div class="overlay">Mammie Kuliner</div></a>
-            </div>
-            <div class="kelas">
-                <img src="../../assets/img/getuk-pisang-diana.jpeg" alt="">
-                <a href="https://maps.app.goo.gl/pu5tMBMNNYqQj9TBA
-                "><div class="overlay">Gethuk Diana</div></a>
-            </div> 
+            <?php
+            }
+        } else {
+            echo "No records Found";
+        }
+        ?>
         </div>
     </div>
   </section>
