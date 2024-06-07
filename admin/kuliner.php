@@ -11,6 +11,7 @@ include('../middleware/adminMiddleware.php');
     <!-- Page Heading -->
     <h1 class="h3 mb-2 text-gray-800">Daftar Kuliner</h1>
     <p class="mb-4">Berikut ini adlah daftar tempat kuliner yang ada di Magetan</p>
+    <a href="tambah-kuliner.php" class="btn btn-success mb-3"><i class="fa-solid fa-plus"></i></a>
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">

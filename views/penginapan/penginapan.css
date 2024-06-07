@@ -50,6 +50,8 @@ body::-webkit-scrollbar{
     display: none;
 }
 
+
+
 .navbar {
     background-color: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -78,6 +80,46 @@ body::-webkit-scrollbar{
     background-color: var(--second-color);
 
 }
+.navbar-toggler {
+  border: none;
+  font-size: 1.25rem;
+  
+}
+.navbar-toggler:focus, .btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+.nav-link {
+  border: var(--first-color);
+  color: black;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--first-color);
+
+}
+@media (min-width: 991px){
+  .nav-link::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0%;
+      height: 2px;
+      background-color: rgb(59, 59, 59);;
+      visibility: hidden;
+      transition: 0.3s ease-in-out;
+
+  }
+  .nav-link:hover::before, .nav-link.active::before { 
+      width: 100%;
+      visibility: visible;
+  }
+}
+
 
 .navbar-toggler {
     border: none;

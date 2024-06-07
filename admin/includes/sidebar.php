@@ -24,41 +24,42 @@
 
      <li class="nav-item">
          <a class="nav-link" href="wisata.php">
-             <i class="fas fa-fw fa-table"></i>
+         <i class="fa-solid fa-landmark"></i>
              <span>Daftar Tempat Wisata</span></a>
      </li>
 
-    <li class="nav-item">
+    <!-- <li class="nav-item">
          <a class="nav-link" href="tambah-wisata.php">
              <i class="fas fa-fw fa-table"></i>
              <span>Tambahkan Wisata</span></a>
-     </li>
+     </li> -->
 
      <!-- Nav Item - Tables -->
      <li class="nav-item">
          <a class="nav-link" href="kuliner.php">
-             <i class="fas fa-fw fa-table"></i>
+         <i class="fa-solid fa-bowl-food"></i>
              <span>Daftar Tempat Kuliner</span></a>
      </li>
 
-     <li class="nav-item">
+     <!-- <li class="nav-item">
          <a class="nav-link" href="tambah-kuliner.php">
              <i class="fas fa-fw fa-table"></i>
              <span>Tambahkan Kuliner</span></a>
-     </li>
+     </li> -->
 
        <!-- Nav Item - Tables -->
        <li class="nav-item">
          <a class="nav-link" href="penginapan.php">
-             <i class="fas fa-fw fa-table"></i>
+         <i class="fa-solid fa-house"></i>
+
              <span>Daftar Tempat Penginapan</span></a>
      </li>
 
-     <li class="nav-item">
+     <!-- <li class="nav-item">
          <a class="nav-link" href="tambah-penginapan.php">
              <i class="fas fa-fw fa-table"></i>
              <span>Tambahkan Penginapan</span></a>
-     </li>
+     </li> -->
 
 
      <!-- Divider -->

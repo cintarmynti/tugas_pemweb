@@ -8,35 +8,13 @@ session_start();
 
     }
 
+    include('includes/header.php') 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
-    <style>
-        .body{
-            height: 100vh;
-        }
 
-        .card{
-            margin-top: 100px;
-        }
-      
-    </style>
-</head>
-<body>
-    <?php include('./includes/navbar.php'); ?>
-
-    <div class="py-5">
+<div class="py-5">
     <div class="container">
-        <div class="row form justify-content-center">
+        <div class="row justify-content-center">
             <div class="col-md-6">
-                <div class="card ">
                 <?php 
                     if(isset($_SESSION['message']))
                     {
@@ -50,6 +28,9 @@ session_start();
                     }
                 
                 ?>
+                   
+
+                <div class="card">
                     <div class="card-header">
                         <h4>Login Form</h4>
 
@@ -79,5 +60,6 @@ session_start();
     </div>
 </div>
 
-</body>
-</html>
+
+
+<?php include('includes/footer.php') ?>

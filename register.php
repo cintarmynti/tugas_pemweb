@@ -28,7 +28,7 @@ include('includes/header.php')
                 ?>
                    
 
-                <div class="card">
+                <div class="card mt-5">
                     <div class="card-header">
                         <h4>Registration Form</h4>
 

@@ -11,7 +11,7 @@ include('../middleware/adminMiddleware.php');
     <!-- Page Heading -->
     <h1 class="h3 mb-2 text-gray-800">Tempat Wisata</h1>
     <p class="mb-4">Berikut ini adlah daftar tempat wisata yang ada di Magetan</p>
-
+    <a href="tambah-wisata.php" class="btn btn-success mb-3"><i class="fa-solid fa-plus"></i></a>
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
 
@@ -23,7 +23,9 @@ include('../middleware/adminMiddleware.php');
                             <th>Id</th>
                             <th>Nama</th>
                             <th>alamat</th>
+                            <th>HTM</th>
                             <th>jam_buka</th>
+                            <th>Kategori</th>
                             <th>action</th>
 
                         </tr>
@@ -33,23 +35,28 @@ include('../middleware/adminMiddleware.php');
                             <th>Id</th>
                             <th>Nama</th>
                             <th>alamat</th>
+                            <th>HTM</th>
                             <th>jam_buka</th>
+                            <th>Kategori</th>
                             <th>action</th>
                         </tr>
                     </tfoot>
                     <tbody>
                         <?php
                         $wisata = getAll("wisata");
+                        $id = 1;
                         if (mysqli_num_rows($wisata) > 0) {
                             foreach ($wisata as $item) {
                         ?>
                                 <tr>
-                                    <td><?= $item['id']; ?></td>
+                                    <td><?= $id++ ?></td>
                                     <td><?= $item['nama']; ?></td>
                                     <td><?= $item['alamat']; ?></td>
+                                    <td><?= $item['htm']; ?></td>
                                     <td><?= $item['jam_buka']; ?></td>
-                                    <td>
-                                        <a class="btn btn-primary d-inline-block" href="edit-wisata.php?id=<?= $item['id']; ?>">
+                                    <td><?= $item['kategori']; ?></td>
+                                    <td class="d-flex">
+                                        <a class="btn mr-2 btn-primary d-inline-block" href="edit-wisata.php?id=<?= $item['id']; ?>">
                                             <i class="fa-regular fa-pen-to-square"></i>
                                         </a>
                                         <form action="code.php" method="POST" class="d-inline-block">

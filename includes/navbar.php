@@ -24,9 +24,35 @@
             </div>
             
           </div>
-          <a href="#" class="login-button">Login</a>
-            <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          
+          <ul class="navbar-nav justify-content-right pe-3">
+          <?php if (isset($_SESSION['auth'])) { ?>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <?= $_SESSION['auth_user']['name'] ?>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+                    </ul>
+                </li>
+                <?php
+            } else {
+            ?>
+            <li class="mx-1">
+            <a href="http://localhost:8000/login.php" class="login-button">Login</a>
+            </li>
+            <li class="nav-item">
+              <a href="http://localhost:8000/register.php" class="login-button">Register</a>
+            </li>
+
+            <?php
+        }
+
+        ?>
+          </ul>
+          
+            <!-- <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
               <span class="navbar-toggler-icon"></span>
-            </button>
+            </button> -->
         </div>
     </nav>

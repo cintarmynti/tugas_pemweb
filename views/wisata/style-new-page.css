@@ -120,7 +120,7 @@ body::-webkit-scrollbar{
 }
 
 .banner-sarangan {
-    background: url(/assets/telaga-sarangan.jpg) no-repeat center center;
+    background: url(/assets/img/telaga-sarangan.jpg) no-repeat center center;
     background-size: cover;
     width: 100%;
     padding-top: 20%;
@@ -131,7 +131,7 @@ body::-webkit-scrollbar{
 }
 
 .banner-wahyu {
-    background: url(/assets/telaga-wahyu-hitam.jpg) no-repeat center center;
+    background: url(/assets/img/telaga-wahyu-hitam.jpg) no-repeat center center;
     background-size: cover;
     width: 100%;
     padding-top: 20%;
@@ -141,7 +141,7 @@ body::-webkit-scrollbar{
 
 }
 .banner-mongkrang {
-    background: url(/assets/bukit-mongkrang-hitam.jpg) no-repeat center center;
+    background: url(/assets/img/bukit-mongkrang-hitam.jpg) no-repeat center center;
     background-size: cover;
     width: 100%;
     padding-top: 20%;
@@ -152,7 +152,7 @@ body::-webkit-scrollbar{
 }
 
 .banner-mojosemi {
-    background: url(/assets/mojosemi-htm.jpg) no-repeat center center;
+    background: url(/assets/img/mojosemi-htm.jpg) no-repeat center center;
     background-size: cover;
     width: 100%;
     padding-top: 20%;
@@ -161,7 +161,7 @@ body::-webkit-scrollbar{
 }
 
 .banner-geni-langit {
-    background: url(/assets/geni-langit-htm.jpg) no-repeat center center;
+    background: url(/assets/img/geni-langit-htm.jpg) no-repeat center center;
     background-size: cover;
     width: 100%;
     padding-top: 20%;
@@ -170,7 +170,7 @@ body::-webkit-scrollbar{
 }
 
 .banner-cemoro-sewu {
-    background: url(/assets/cemoro-sewu-htm.jpg) no-repeat center center;
+    background: url(/assets/img/cemoro-sewu-htm.jpg) no-repeat center center;
     background-size: cover;
     width: 100%;
     padding-top: 20%;
