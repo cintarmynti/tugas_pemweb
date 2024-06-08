@@ -2,66 +2,122 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="../wisata/destinasi.css">
-  <style>
-        img {
-            border: 2px solid #53721D;
-            border-radius: 25px; /* Sudut bulat dengan radius 25px */
-            box-shadow: 0 4px 8px rgba(83, 114, 29, 0.5);
-        }
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Kuliner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../wisata/destinasi.css">
+    <style>
         .judul {
             text-transform: capitalize;
+            font-size: 48px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 110px;
         }
 
-        ul li{
-            list-style: none;
+        .body {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Untuk memastikan semua konten di dalam .body berada di tengah */
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 4rem;
         }
 
-        li{
-            margin-bottom: 6px;
+        .body .cover {
+            max-width: 100%;
+            height: 450px;
+            object-fit: cover;
+            margin-top: 1rem;
+        }
+
+        .img-center {
+            display: flex;
+            justify-content: center;
+            width: 100%; /* Pastikan lebar penuh untuk perataan gambar */
+        }
+
+        .text-left {
+            text-align: left;
+            width: 100%;
+            max-width: 800px; /* Tentukan lebar maksimal */
+            padding-left: 5rem; /* Menambahkan padding kiri */
+            padding-right: 5rem; /* Menambahkan padding kanan */
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 1rem;
+        }
+
+        .sub-judul{
+            font-weight: bold;
+        }
+
+        .icon{
+            width: 30px;
+            height: 30px;
+        }
+
+        .sub-menu{
+            display: flex;
+        }
+
+        .text-span{
+            font-weight: bold;
         }
     </style>
 </head>
+
 <body>
     <?php include('../../includes/navbar.php'); ?>
     <?php
-        if (isset($_GET['id'])) {
-            $id = $_GET['id'];
-            $kuliner = getById("kuliner", $id);
-            if (mysqli_num_rows($kuliner) > 0) {
-                $data = mysqli_fetch_array($kuliner);
+    if (isset($_GET['id'])) {
+        $id = $_GET['id'];
+        $kuliner = getById("kuliner", $id);
+        if (mysqli_num_rows($kuliner) > 0) {
+            $data = mysqli_fetch_array($kuliner);
     ?>
-    <div class="container mt-3">
-        <div class="row w-100">
-            <div class="col-md-6">
-                <img src="../../uploads/<?= $data['gambar']; ?>" alt="Location Image" class="location-image">
+            <div class="body">
+                <div class="mt-1 text-center">
+                    <h2 class="judul"><?= $data['nama']; ?></h2>
+                </div>
+                <div class="img-center">
+                    <img class="cover" src="../../uploads/<?= $data['gambar']; ?>" alt="">
+                </div>
+                <div class="text-left">
+                    <p class="sub-judul">Tentang <?= $data['nama']; ?></p>
+                    <p><?= $data['desc']; ?></p>
+                    <p class="sub-judul">Informasi Wisata</p>
+                    <div class="sub-menu">
+                        <img class="icon" src="../../assets/icons/location.png" alt="">
+                        <p><span class="text-span">Alamat: </span><?= $data['alamat']; ?></p>
+                    </div>
+                    <div class="sub-menu">
+                        <img class="icon" src="../../assets/icons/dollar-square.png" alt="">
+                        <p><span class="text-span">Metode Pembayaran: </span><?= $data['metode_pembayaran']; ?></p>
+                    </div>
+                    <div class="sub-menu">
+                        <img class="icon" src="../../assets/icons/clock.png" alt="">
+                        <p><span class="text-span">Jam Buka: </span><?= $data['jam_buka']; ?></p>
+                    </div>
+                    <div class="sub-menu">
+                        <img class="icon" src="../../assets/icons/signpost.png" alt="">
+                        <p><span class="text-span">Kategori: </span><?= $data['kategori']; ?></p>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6 d-flex flex-column">
-                <h1 class="fw-bold judul"><?= $data['nama']; ?></h1>
-                <ul>
-                    <li>Jam Buka  <?= $data['jam_buka']; ?></li>
-                    <li>Kategori <?= $data['kategori'];  ?></li>
-                    <li>Alamat <?= $data['alamat'];  ?></li>
-                    <li>Deskripsi  <?= $data['desc']; ?></li>
-                </ul>
-            </div>
-        </div>
-    </div>
     <?php
-            } else {
-                echo "Kulliner not found";
-            }
         } else {
-            echo "ID missing from URL";
+            echo "<div class='container mt-4'><div class='alert alert-warning'>Wisata tidak ditemukan.</div></div>";
         }
+    } else {
+        echo "<div class='container mt-4'><div class='alert alert-warning'>ID tidak ditemukan di URL.</div></div>";
+    }
     ?>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </html>

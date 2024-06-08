@@ -100,11 +100,11 @@
                     </div>
                     <div class="sub-menu">
                         <img class="icon" src="../../assets/icons/clock.png" alt="">
-                        <p><span class="text-span">Alamat: </span><?= $data['jam_buka']; ?></p>
+                        <p><span class="text-span">Jam Buka: </span><?= $data['jam_buka']; ?></p>
                     </div>
                     <div class="sub-menu">
                         <img class="icon" src="../../assets/icons/signpost.png" alt="">
-                        <p><span class="text-span">Alamat: </span><?= $data['kategori']; ?></p>
+                        <p><span class="text-span">Kategori Wisata: </span><?= $data['kategori']; ?></p>
                     </div>
                 </div>
             </div>
