@@ -31,7 +31,7 @@
           <div class="card__data">
             <span class="card__description"></span>
             <h2 class="card__title"><?php echo $item['nama']; ?></h2>
-            <a href="../wisata/detail.php?=<?= $item['id']; ?>" class="card__button">Baca Selengkapnya</a>
+            <a href="../wisata/detail.php?id=<?= $item['id']; ?>" class="card__button">Baca Selengkapnya</a>
           </div>
         </article>
         <?php
