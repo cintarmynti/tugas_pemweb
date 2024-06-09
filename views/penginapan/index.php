@@ -38,6 +38,7 @@
                 <h4><?php echo $item['nama']; ?></h4>
               </div>
               <p><?php echo $item['alamat']; ?></p>
+              <a href="../penginapan/detail-penginapan.php?id=<?= $item['id']; ?>">Lihat Selengkapnya</a>
             </div>
           </div>
           <?php
