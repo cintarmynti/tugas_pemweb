@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php include('../../functions/myfunctions.php') ?>
 
 <!DOCTYPE html>
@@ -10,8 +11,8 @@
     <title>Destinasi Wisata</title>
 </head>
     <body>
-    <?php include('../../includes/navbar.php') ?>
     <section>
+    <?php include('../../includes/navbar.php') ?>
     <div class="container-fluid banner">
       <div class="content d-flex align-items-center justify-content-center fs-1 flex-column text-white">
         <h1>Nikmati Keindahan Alam</h1>
@@ -53,6 +54,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/38be933f5f.js" crossorigin="anonymous"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 
 <!-- "container d-flex align-items-center justify-content-center fs-1 text-white flex-colum"> -->
